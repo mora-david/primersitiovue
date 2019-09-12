@@ -19,7 +19,7 @@
           <h2>Featured</h2>
     
 
-<productodesc>{{categories}}</productodesc>
+<!-- <productodesc>{{categories}}</productodesc> -->
 
 
 <div class="card-deck col-12 pl-0 pr-0 divfeatures" id="featured-products">

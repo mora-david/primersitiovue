@@ -1,34 +1,8 @@
 <template>
 <div>
-  <div class="home">
- 
 
 
-            <h1 class="col-12">Excelsior!</h1>
-            <br>
-            <center>
-            <a class="btn btn-primary btn-lg" href="/categories" role="button">Browse Categories</a>
-            </center>
-            </div>
-        
-    </header>
-<!-- featured -->
 
-<!-- div Container Features & Category-->
-<div class="espacio">
-          <h2>Featured</h2>
-    
-
-<productodesc>{{categories}}</productodesc>
-
-
-<div class="card-deck col-12 pl-0 pr-0 divfeatures" id="featured-products">
-
-</div>
-
-      <!-- fin featured -->
- <br>  
- <br> 
       <div class="espacio col-sm-12">
           <h2>Categories</h2>
           <div class="container mt-2 espacio2">
@@ -44,9 +18,9 @@
         
         
 
-      <div class="justify-content flex-container" id="prueba">
+      <div class="d-flex align-content-stretch flex-wrap container" id="prueba">
       
-<div class="cate" id="Cstores" v-for="categorie in categories.categories.slice(0, 8)" :key="id=categorie.id">
+<div class="cate" id="Cstores" v-for="categorie in categories.categories" :key="id=categorie.id">
               <div class="colorw">
                 <p class="icon"><i class="fas fa-volume-down icon"></i></p>
                 <a :href="'category/' + categorie.uuid">sitio</a>
@@ -72,7 +46,6 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import Header1 from '@/components/header1.vue'
-import ProductoDesc from '@/components/ProductoDesc.vue'
 
 
 export default {
@@ -103,7 +76,6 @@ getCategories(){
   components: {
     HelloWorld,
     Header1,
-    ProductoDesc
   }
 }
 </script>

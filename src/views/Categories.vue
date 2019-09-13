@@ -13,34 +13,26 @@
             </div>
       </div>
 
-      <section>
 
-        
-        
+ <div class="container d-flex justify-content-center flex-row bd-highlight mb-3">
+  <div class="row" style="width:40%">
+    <div class="col-sm" v-for="categorie in categories.categories" :key="categorie.id">
+      <div class="card-img-top mx-auto d-block" style="width:105px; height:210px; border:solid; margin:10px; background-image:url('https://contenidos.enter.co/custom/uploads/2019/09/Marvel-DImension-of-Heroes.jpg')">
+<p class="p-2 bd-highlight"><i class="fas fa-volume-down icon"></i></p>
+                <p class="p-2 bd-highlight" style="color:yellow; font-size:1.2rem">{{categorie.name}}</p>
+                <a class="p-2 bd-highlight" style="color:cyan; font-size:1.2rem"  :href="'category/' + categorie.uuid">Productos</a>
+                                <p class="p-2 bd-highlight" style="color:yellow; font-size:1.2rem">listening</p>
 
-      <div class="d-flex align-content-stretch flex-wrap container" id="prueba">
-      
-<div class="cate" id="Cstores" v-for="categorie in categories.categories" :key="id=categorie.id">
-              <div class="colorw">
-                <p class="icon"><i class="fas fa-volume-down icon"></i></p>
-                <a :href="'category/' + categorie.uuid">sitio</a>
-                <p class="categoria">{{categorie.name}}</p>
-                <p class="listening">listening</p>
-              </div>
-            </div>
-      </div>
-
-      </section>
-
-
-  </section>   
+                 </div>
 </div>
-</div>
+    </div>
+  </div>
+  </div>
+
+
+
+
 </template>
-
-
-
-
 
 <script>
 // @ is an alias to /src
@@ -66,7 +58,7 @@ getCategories(){
       .then(response => {
         this.categories = response.data
         console.log(response)
-        //alert('hola')
+        //alert(this.categories)
       })
       
     
@@ -79,3 +71,5 @@ getCategories(){
   }
 }
 </script>
+
+

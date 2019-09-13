@@ -3,7 +3,7 @@
 <div>
     <h2>{{category.name}}</h2>
 
-<div class="d-flex align-content-stretch flex-wrap container">
+<div class="d-flex align-content-stretch flex-wrap container flex-row">
 <!-- <h2>{{category.name}}</h2> -->
 <!-- <h1>{{$route.params.id}}</h1> -->
 <div v-for="product in category.products" :key="product.id">
